@@ -186,28 +186,26 @@ Sólo podremos usarlo para archivos modificados o añadidos al repositorio.
 
 Lo cual añadirá el archivo CMakeLists.txt a nuestro commit.
 
-
-Realizar un commit
 --------
-
 ### Notas
-##git reset 
--- soft [id commit]
+--------
+## git reset 
+-- `<soft [id commit]>`
 	Elimina los commits a partir del commit que le indiquemos y los deja en el Staging Area listo para hacer un commit
 
--- mixed [id commit]
+-- `<mixed [id commit]>`
 	Elimina los commits a partir del commit que le indiquemos y los deja listos para el add y commit
 
--- hard [id commit]
+-- `<hard [id commit]>`
 	Elimina los commits a partir del commit que le indiquemos y elimina los archivos (Es posible recuperar los archivos si se tiene el Hash del commit)
 
-##Configurar el editor Vim por defecto
-	git config --global core.editor "sublime --wait"
+## Configurar el editor Vim por defecto
+	`<git config --global core.editor "sublime --wait">`
 
-##Crear rama y dirigirse a ella
-	git checkout -b [nombre de la rama]
+## Crear rama y dirigirse a ella
+	`<git checkout -b [nombre de la rama]>`
 
-##git rebase (Reescribiendo la historia del proyecto)
+## git rebase (Reescribiendo la historia del proyecto)
 	Commands:
 	# p, pick = use commit
 	# r, reword = use commit, but edit the commit message
@@ -217,12 +215,12 @@ Realizar un commit
 	# x, exec = run command (the rest of the line) using shell
 	# d, drop = remove commit
 
-##git stash (Guardando cambios temporalmente)
+## git stash (Guardando cambios temporalmente)
 	git stash list = ver los cambios guardados
 	git stash drop [id del stash]  
-		// Ejemplo: git stash drop stash@{1}
+		// Ejemplo: `<git stash drop stash@{1}>`
 	git stash apply [id del stash]
-		// Ejemplo: git stash apply stash@{3}
+		// Ejemplo: `<git stash apply stash@{3}>`
 
-##git cherry-pick [Hash del commit]
+## git cherry-pick [Hash del commit]
 	Si estás trabajando en una rama, pero de repente notas que hiciste un cambio en la rama que no debías, con este comendo permite mover un commit de una rama a otra.
